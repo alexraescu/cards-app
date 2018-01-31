@@ -1,0 +1,18 @@
+
+<mat-card  *ngFor="let entry of entries" class="file-card">
+  <mat-card-header >
+        <div mat-card-avatar>
+          <mat-icon *ngIf="entry.entry.target.file; else folderAvatar">insert_drive_file</mat-icon>
+          <ng-template #folderAvatar>
+              <mat-icon>folder</mat-icon>
+          </ng-template>
+        </div>
+        <mat-card-title *ngIf="entry.entry.target.file; else folderTitle">{{entry.entry.target.file.name}}</mat-card-title>
+        <ng-template #folderTitle>
+            <mat-card-title >{{entry.entry.target.folder.name}}</mat-card-title>
+        </ng-template>
+  </mat-card-header>
+  <mat-card-actions>
+    <button mat-button>Details</button>
+  </mat-card-actions>
+</mat-card>
