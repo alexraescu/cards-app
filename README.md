@@ -1,6 +1,11 @@
 # CardApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.6.
+## Steps to run:
+
+`npm install -g @angular/cli` - installs angular cli globally
+`npm install` - installs all the dependencies
+`ng serve` - starts dev server
 
 ## Development server
 
